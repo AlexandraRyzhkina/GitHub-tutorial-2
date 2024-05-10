@@ -191,20 +191,22 @@ p {
 
 /* buttons portfolio */
 
+.buttons {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .portfolio-button-list {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
 
-
-.portfolio-button-item{
-  flex-basis: calc( 100% / 5 - var(--portfolio-button-gap));
-  margin-left: var(--portfolio-button-gap);
-  
-
+.portfolio-button-item {
+  margin-right: var(--portfolio-button-gap);
+  flex-basis: calc(100% / 5 - var(--portfolio-button-gap));
 }
-
 
 /* section */
 .section {
