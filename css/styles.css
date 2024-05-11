@@ -220,10 +220,13 @@ img{
 .section.hero {
   background-color: var(--footer-bg-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
   color: var(--hero-color);
+  text-transform: uppercase;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.364;
@@ -446,6 +449,7 @@ margin-bottom: 0;
 
 .section-works.aftertitle {
   margin-bottom: 4px;
+  font-size: 18px;
 }
 
 /* footer */
@@ -463,6 +467,9 @@ margin-bottom: 0;
 .footer-link-adress {
   color: var(--footer-txt-color);
   line-height: 1.714;
+
+  display: block;
+  margin-bottom: 12px;
 }
 
 .footer-link{
@@ -470,10 +477,14 @@ margin-bottom: 0;
   margin-bottom: 28px;
 }
 
+
 .footer-link-mail,
 .footer-link-tel {
-  color: var(--primary-text-color);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.714;
+
+  display: block;
+  margin-bottom: 12px;
 }
 
 .footer-link-adress:hover,
