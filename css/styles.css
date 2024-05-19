@@ -23,6 +23,7 @@
   --outline-portfolio-card: #eeeeee;
   --list-gap: 30px;
   --portfolio-button-gap: 8px;
+  --social-icon-noeffect: #afb1b8;
 }
 
 html {
@@ -63,6 +64,10 @@ img {
 
 .title {
   margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .aftertitle {
@@ -137,9 +142,6 @@ img {
 
 .site-nav-link.current {
   color: var(--accent-color);
-  border-bottom: 4px solid var(--accent-color);
-  margin-bottom: -1px;
-  border-radius: 2px;
 }
 
 .site-auth-link {
@@ -153,16 +155,7 @@ img {
   color: var(--accent-color);
 }
 
-.site-nav-link:hover,
-.site-nav-link:focus {
-  border-bottom: 4px solid var(--accent-color);
-  margin-bottom: -1px;
-  border-radius: 2px;
-}
-
 /* стилизація авторизааціі */
-
-
 
 /* LOGO positioning*/
 
@@ -193,7 +186,6 @@ img {
 } */
 
 .site-nav-link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -203,6 +195,7 @@ img {
 .site-auth-list {
   display: flex;
   margin-left: auto;
+  justify-content: center;
 }
 
 .site-auth-item + .site-auth-item {
@@ -214,9 +207,26 @@ img {
 } */
 
 .site-auth-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* position auth icons */
+
+.auth-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+}
+
+.site-auth-link:hover .auth-icon,
+.site-auth-link:focus .auth-icon {
+  fill: var(--accent-color);
 }
 
 /* hero + buttons */
@@ -237,6 +247,7 @@ img {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero/hero-img.jpg);
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -334,11 +345,6 @@ img {
   padding-top: 94px;
 }
 
-.section-pluses.title {
-  line-height: 1.172;
-  letter-spacing: 0.03em;
-}
-
 .section-pluses-list {
   margin-left: calc(-1 * var(--list-gap));
   display: flex;
@@ -350,7 +356,7 @@ img {
   margin-left: var(--list-gap);
 }
 
-.section-pluses.aftertitle{
+.section-pluses.aftertitle {
   margin-top: 30px;
 }
 
@@ -362,32 +368,31 @@ img {
 
 /* додавання картинок */
 
-.section-pluses-item::before{
+.section-pluses-item::before {
   content: "";
   display: block;
   height: 120px;
-  
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--button-noeffect-color);
 }
-.icon-antenna::before{
+.icon-antenna::before {
   background-image: url(../images/svg/pluses/antenna-1.svg);
 }
 
-.icon-clock::before{
+.icon-clock::before {
   background-image: url(../images/svg/pluses/clock-1.svg);
 }
 
-.icon-diagram::before{
+.icon-diagram::before {
   background-image: url(../images/svg/pluses/diagram-1.svg);
 }
 
-.icon-astronaut:before{
+.icon-astronaut:before {
   background-image: url(../images/svg/pluses/astronaut-1.svg);
 }
-
 
 /* section wedo */
 
@@ -400,13 +405,6 @@ img {
 .section-wedo-item {
   flex-basis: calc(100% / 3 - var(--list-gap));
   margin-left: var(--list-gap);
-}
-
-.section-wedo {
-  font-size: 36px;
-  line-height: 1.172;
-  letter-spacing: 0.03em;
-  text-align: center;
 }
 
 /* section command */
@@ -439,13 +437,6 @@ img {
   padding-top: 94px;
 }
 
-.section-command {
-  font-size: 36px;
-  line-height: 1.172;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-
 .section-command.aftertitle {
   color: var(--title-text-color);
   font-size: 16px;
@@ -460,6 +451,94 @@ img {
   line-height: 1.172;
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+/* command social links */
+
+.command-social-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.command-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.command-social-item + .command-social-item {
+  margin-left: 10px;
+}
+
+.command-social-icon {
+  fill: var(--social-icon-noeffect);
+}
+
+.command-social-link:hover,
+.command-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.command-social-link:hover .command-social-icon,
+.command-social-link:focus .command-social-icon {
+  background-color: var(--accent-color);
+  fill: var(--hero-color);
+}
+
+/* section partners */
+
+.section.partners {
+  padding-top: 94px;
+}
+
+.partners-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 6);
+}
+
+.partners-item + .partners-item {
+  margin-left: var(--list-gap);
+}
+
+.partners-link {
+  display: block;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--social-icon-noeffect);
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+
+  position: relative;
+}
+
+.partners-icon {
+  width: 106px;
+  height: 60px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: var(--social-icon-noeffect);
+}
+
+.partners-link:hover {
+  border-color: var(--accent-color);
+}
+
+.partners-link:hover .partners-icon {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* PORTFOLIO */
@@ -547,8 +626,8 @@ img {
 
 /* стилізація футер соціальні */
 
-.footer-social-title{
-  color:var(--footer-txt-color);
+.footer-social-title {
+  color: var(--footer-txt-color);
   text-transform: uppercase;
   font-size: 14px;
   line-height: calc(16.41 / 14);
@@ -560,53 +639,34 @@ img {
   display: flex;
 }
 
-.footer-social-list{
-  display: flex;
-}
-
-.footer-flex-social{
+.footer-flex-social {
   margin-left: 70px;
+  padding-top: 12px;
 }
 
-.footer-social-item::before{
-  content: "";
-  height: 44px;
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-link {
   width: 44px;
-  display: inline-block;
-  
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer-social-item{
-  text-wrap: wrap;
+  height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-social-item + .footer-social-item{
+.footer-social-item + .footer-social-item {
   margin-left: 10px;
 }
 
-.footer-social-item:hover{
+.footer-social-link:hover {
   background-color: var(--accent-color);
-}
-
-.icon-instagram::before{
-  background-image: url(../images/svg/footer-social/instagram\ 2.svg);
-}
-
-.icon-twitter::before{
-  background-image: url(../images/svg/footer-social/twitter\ 1.svg);
-}
-
-.icon-facebook::before{
-  background-image: url(../images/svg/footer-social/facebook\ 1.svg);
-}
-
-.icon-linkedin::before{
-  background-image: url(../images/svg/footer-social/linkedin\ 1.svg);
 }
 
 /* .footer-link-adress:hover,
